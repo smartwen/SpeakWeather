@@ -134,7 +134,7 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
             TextView iconTv = itemView.findViewById(R.id.item_center_tv_con);
             TextView windTv = itemView.findViewById(R.id.item_center_tv_wind);
             TextView itemprangeTv = itemView.findViewById(R.id.item_center_tv_temp);
-            ImageView iIv = itemView.findViewById(R.id.item_center_iv);
+            // ImageView iIv = itemView.findViewById(R.id.item_center_iv);
 //          获取对应的位置的天气情况
             JHTempBean.ResultBean.FutureBean dataBean = futureList.get(i);
             idateTv.setText(dataBean.getDate());
@@ -173,10 +173,12 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
     private void initView(View view) {
         tempTv = view.findViewById(R.id.frag_tv_currenttemp);
         cityTv = view.findViewById(R.id.frag_tv_city);
-        conditionTv = view.findViewById(R.id.frag_tv_currenttemp);
+        conditionTv = view.findViewById(R.id.frag_tv_condition);
+        dateTv = view.findViewById(R.id.frag_tv_date);
         windTv = view.findViewById(R.id.frag_tv_wind);
         tempRangeTv = view.findViewById(R.id.frag_tv_temprange);
-        dateTv = view.findViewById(R.id.frag_tv_date);
+        dayIv = view.findViewById(R.id.frag_iv_today);//说天气右上角图标icon
+
         clothIndexTv = view.findViewById(R.id.frag_index_tv_dress);
         carIndexTv = view.findViewById(R.id.frag_index_tv_washcar);
         coldIndexTv = view.findViewById(R.id.frag_index_tv_cold);
@@ -184,8 +186,8 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
         raysIndexTv = view.findViewById(R.id.frag_index_tv_rays);
         airIndexTv = view.findViewById(R.id.frag_index_tv_air);
 
-        dayIv = view.findViewById(R.id.frag_iv_today);
-        futureLayout = view.findViewById(R.id.frag_center_layout);
+
+        futureLayout = view.findViewById(R.id.frag_center_layout);//用于显示未来三天天气情况
         outLayout = view.findViewById(R.id.out_layout);
 
 
